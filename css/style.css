@@ -180,6 +180,7 @@ COMPONENTS
 FIRST MODAL
 /*************************/
 .modal {
+    display: none;
     position: fixed;
     top: 0;
     left: 0;
@@ -188,7 +189,7 @@ FIRST MODAL
     z-index: 100;
     background-color: #000000;
 
-    font-size: 1.4rem;
+    font-size: 1.3rem;
 }
 .modal__content {
     position: absolute;
@@ -231,11 +232,15 @@ FIRST MODAL
     max-width: 80%;
 } */
 
+/************************
+SECOND MODAL
+/*************************/
 .second__modal {
     background-color: #ffffff;
+    display: flex;
 }
 .first__mnstr {
-    max-width: 62%;
+    flex: 0 1 60%;
     background-color:#1A1A1A;
     padding: 4rem 3rem 1rem 3rem;
 }
@@ -252,6 +257,8 @@ FIRST MODAL
     margin-right: .7rem;
 }
 .mnstr__button {
+    font-size: 1.3rem;
+    font-weight: 600;
     border: 1px solid #00AD90;
     border-radius: 1000rem;
     padding: .45rem 1.7rem;
@@ -271,7 +278,7 @@ FIRST MODAL
     margin-right: 10rem;
 }
 .info__heading{
-    font-size: 1.8rem;
+    font-size: 1.65rem;
     font-weight: 600;
 }
 
@@ -297,4 +304,152 @@ FIRST MODAL
 }
 .coin__modal:not(:last-child){
     margin-right: 6rem;
+}
+.coin__button {
+    margin-left: -4rem;
+}
+
+/************************
+
+/*************************/
+.second__mnstr {
+    padding: 4rem 6rem;
+    flex: 0 1 40%;
+    background-image: linear-gradient(to right bottom, rgba(3, 115, 93, 0.78) -11.46%, rgb(1, 53, 43));
+}
+
+.second__mnstr--tertiary {
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 2.25rem;
+    margin-bottom: 2rem;
+}
+.second__para {
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-bottom: 4rem;
+}
+
+.second__box {
+    display: block;
+    text-decoration: none;
+    color: #ffffff;
+    text-align: center;
+    font-weight: 500;
+    margin-top: 2rem;
+    padding: 1.2rem 6rem;
+    border: 1px solid #ffffff;
+    border-radius: .5rem;
+}
+
+.second__para-mnstr {
+    margin-top: 2.5rem;
+    display: flex;
+    padding-top: 1.5rem;
+    border-top: 2px solid rgba(255, 255, 255, 0.2);
+    ;
+}
+.excla {
+    position: relative;
+    display: inline-block;
+    border: 1px solid #ffffff;
+    height: 2rem;
+    width: 4rem;
+    border-radius: 100rem;
+    margin-right: 2rem;
+    margin-top: 1rem;
+}
+.spa {
+    font-weight: 500;
+    position: absolute;
+    display: inline-block;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/************************
+BSC ADDRESS MODAL
+/*************************/
+.mnstr-address__modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+    background-color: rgba(0, 0, 0, .5);
+
+    font-size: 1.3rem;
+}
+
+.mnstr-address__modal--content {
+    position: absolute;
+    width: 50%;
+    top: 50%;
+    left: 50%;
+    margin: 0 auto;
+    transform: translate(-50%, -50%);
+
+    margin: 0 auto;
+}
+
+.mnstr-address__modal--form {
+    position: relative;
+
+    background-color: rgba(0, 0, 0, 1);
+    padding: 3.5rem 8rem;
+    text-align: center;
+
+    border-radius: 1rem;
+    border: 3px solid #00AD90;
+}
+.mnstr-address__modal--exit {
+    color: #ffffff;
+    font-size: 1.8rem;
+    position: absolute;
+    top: 1rem;
+    right: 2rem;
+
+    cursor: pointer;
+}
+
+.mnstr-address__heading {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 4rem;
+}
+
+.mnstr-address__para {
+    font-size: 1.8rem;
+    margin-bottom: 3rem;
+}
+
+.mnstr-address__input-text::placeholder {
+    text-align: center;
+    font-family: 'Poppins';
+}
+
+.mnstr-address__input-text{
+    font-size: 1.6rem;
+    width: 100%;
+    color: #ffffff;
+    padding: 1.2rem 2rem;
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+    background-color: rgba(0 ,0, 0, 1);
+}
+
+.mnstr__button-box{
+    display: block;
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #00AD90;
+    text-align: center;
+    font-weight: 500;
+    margin-top: 2rem;
+    padding: 1.2rem 6rem;
+    border-radius: .5rem;
+    margin-bottom: 2rem;
 }
