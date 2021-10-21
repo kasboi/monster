@@ -625,24 +625,7 @@ MEDIA QUERIES
         line-height: 2rem;
         margin-bottom: 1rem;
     }
-    .about__button:link, .about__button:visited {
-        font-size: 1rem;
-        margin-top: 2rem;
-        padding: 1rem 2.5rem;
-    }
 
-    .mnstr__coin {
-        padding: 2rem 0;
-        margin-top: 0;
-        margin-bottom: 1.5rem;
-    }
-
-}
-
-@media only screen and (max-width: 510px) {
-    .about__text {
-        top: 15%;
-    }
     .header__menu {
         display: inline-block;
     }
@@ -662,6 +645,34 @@ MEDIA QUERIES
     .header__nav-list {
         margin-bottom: 2.5rem;
     }
+    
+    .about__button:link, .about__button:visited {
+        font-size: 1rem;
+        margin-top: 2rem;
+        padding: 1rem 2.5rem;
+    }
+
+    .mnstr__coin {
+        padding: 2rem 0;
+        margin-top: 0;
+        margin-bottom: 1.5rem;
+    }
+    .mnstr-address__modal--content {
+        left: 41%;
+        margin: 0 auto;
+        transform: translate(-50%, -50%);
+    }
+    .mnstr-address__modal--form {
+        padding: 1.5rem 2rem;
+        width: 135%;
+    }
+
+}
+
+@media only screen and (max-width: 510px) {
+    .about__text {
+        top: 15%;
+    }
     .main__box {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -676,15 +687,6 @@ MEDIA QUERIES
     }
     .mnstr__logo {
         width: 5rem;
-    }
-    .mnstr-address__modal--content {
-        left: 41%;
-        margin: 0 auto;
-        transform: translate(-50%, -50%);
-    }
-    .mnstr-address__modal--form {
-        padding: 1.5rem 2rem;
-        width: 135%;
     }
     .coin__modal:not(:last-child) {
         margin-right: 0;
