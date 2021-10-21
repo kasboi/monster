@@ -64,7 +64,7 @@ ABOUT IMAGE
 .about__text {
     position: absolute;
     top: 30%;
-    left: 18rem;
+    left: 16rem;
 } 
 .heading__secondary {
     font-size: 3.5rem;
@@ -116,21 +116,17 @@ MAIN SECTION
     margin-bottom: .8rem;
 }
 .main__box {
-    display: flex;
-    margin: 0 4rem 4rem 4rem;
-    justify-content: center;
+    display: grid;
     text-align: left;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 3rem;
 }
 .box {
-    width: 35rem;
+    /* width: 35rem; */
     padding: 1.3rem 2.5rem;
     border: 1px solid #00AD90;
     border-radius: 1rem;
 }
-.box:not(:last-child){
-    margin-right: 4rem;
-}
-
 /************************
 ROADMAP
 /*************************/
@@ -139,18 +135,26 @@ ROADMAP
     padding: 5rem 0 2rem 0;
     text-align: center;
 }
+.roadmap img {
+    width: 100%;
+}
 
 .roadmap-heading {
     margin-bottom: 4rem;
 }
 
-.allocation {
+/* .allocation {
     background-image: url("../img/image.png");
     background-size: cover;
-    height: 100vh;
-
+    background-position: top;
     padding: 2rem 2rem;
     text-align: center;
+} */
+.section__allocation {
+    margin-bottom: -1rem;
+}
+.allocation img {
+    width: 100%;
 }
 .allocation-heading {
     margin-left: 7rem;
@@ -177,6 +181,21 @@ COMPONENTS
 }
 
 /************************
+ANIMATION
+/*************************/
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0} 
+    to {top:0; opacity:1}
+  }
+  
+  @keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+  }
+
+/************************
 FIRST MODAL
 /*************************/
 .modal {
@@ -190,6 +209,11 @@ FIRST MODAL
     background-color: #000000;
 
     font-size: 1.3rem;
+
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
 }
 .modal__content {
     position: absolute;
@@ -313,6 +337,7 @@ SECOND MODAL
 
 /*************************/
 .second__mnstr {
+    position: relative;
     padding: 4rem 6rem;
     flex: 0 1 40%;
     background-image: linear-gradient(to right bottom, rgba(3, 115, 93, 0.78) -11.46%, rgb(1, 53, 43));
@@ -382,6 +407,11 @@ BSC ADDRESS MODAL
     background-color: rgba(0, 0, 0, .5);
 
     font-size: 1.3rem;
+
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
 }
 
 .mnstr-address__modal--content {
@@ -405,9 +435,9 @@ BSC ADDRESS MODAL
     border-radius: 1rem;
     border: 3px solid #00AD90;
 }
-.mnstr-address__modal--exit {
+.mnstr-address__modal--exit-1, .mnstr-address__modal--exit-2{
     color: #ffffff;
-    font-size: 1.8rem;
+    font-size: 3rem;
     position: absolute;
     top: 1rem;
     right: 2rem;
@@ -452,4 +482,95 @@ BSC ADDRESS MODAL
     padding: 1.2rem 6rem;
     border-radius: .5rem;
     margin-bottom: 2rem;
+}
+
+/************************
+MEDIA QUERIES
+/*************************/
+@media only screen and (max-width: 1200px) {
+
+    html {
+        font-size: 50%;
+    }
+    .about__text {
+        position: absolute;
+        top: 30%;
+        left: 10rem;
+    } 
+
+
+}
+@media only screen and (max-width: 980px) {
+    .about__text {
+        position: absolute;
+        top: 30%;
+        left: 6rem;
+    }
+}
+@media only screen and (max-width: 900px) {
+    html {
+        font-size: 43.75%;
+    }
+    .about__paragraph {
+        font-size: 1.6rem;
+        margin-bottom: 3rem;
+    }
+}
+@media only screen and (max-width: 780px) {
+    .header{
+        padding: 1.5rem 0 0 4rem;
+    }
+    .about__text {
+        position: absolute;
+        top: 20%;
+        left: 2rem;
+    }
+    .header__box {
+        margin-bottom: 6rem;
+        flex-direction: column;
+    }
+    .header__logo-box {
+        margin-left: 0;
+    }
+    .header__logo-box img:first-child{
+        display: none;
+    }
+    .header__navigation {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .header__nav {
+        list-style: none;
+        font-size: 1.5rem;
+    }
+    .first__paragraph {
+        margin: 0 10rem 7rem 10rem;
+    }
+
+}
+@media only screen and (max-width: 685px) {
+    .heading__secondary {
+        font-size: 3rem;
+        line-height: 4rem;
+    }
+    .about__button:link, .about__button:visited {
+        font-size: 1.2rem;
+        margin-top: 3rem;
+        padding: 1rem 2.5rem;
+    }
+    .about__text {
+        left: 0;
+    }
+}
+@media only screen and (max-width: 560px) {
+    .heading__secondary {
+        font-size: 2rem;
+        line-height: 2rem;
+        margin-bottom: 1rem;
+    }
+    .about__button:link, .about__button:visited {
+        font-size: 1rem;
+        margin-top: 2rem;
+        padding: 1rem 2.5rem;
+    }
 }
