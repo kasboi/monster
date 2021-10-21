@@ -60,7 +60,7 @@ body {
     position: absolute;
     top: 3rem;
     right: 2.5rem;
-    z-index: 9999;
+    z-index: 9;
     cursor: pointer;
 }
 .header__menu-img {
@@ -231,11 +231,12 @@ FIRST MODAL
 .modal__content {
     position: absolute;
     width: 85%;
+    max-height: 100%;
     top: 50%;
     left: 50%;
     margin: 0 auto;
     transform: translate(-50%, -50%);
-
+    overflow: scroll;
     margin: 0 auto;
 }
 
@@ -277,6 +278,7 @@ SECOND MODAL
     display: flex;
 }
 .first__mnstr {
+    position: relative;
     flex: 0 1 60%;
     background-color:#1A1A1A;
     padding: 4rem 3rem 1rem 3rem;
@@ -308,12 +310,10 @@ SECOND MODAL
 .mnstr__info {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     margin-bottom: 3.5rem;
 }
 
-.info__modal:not(:last-child){
-    margin-right: 10rem;
-}
 .info__heading{
     font-size: 1.65rem;
     font-weight: 600;
@@ -330,6 +330,7 @@ SECOND MODAL
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: space-between;
     border-top: 1px solid #ffffff;
     padding: 5rem 0;
     margin-top: 5rem;
@@ -350,7 +351,6 @@ SECOND MODAL
 
 /*************************/
 .second__mnstr {
-    position: relative;
     padding: 4rem 6rem;
     flex: 0 1 40%;
     background-image: linear-gradient(to right bottom, rgba(3, 115, 93, 0.78) -11.46%, rgb(1, 53, 43));
@@ -383,6 +383,7 @@ SECOND MODAL
 .second__para-mnstr {
     margin-top: 2.5rem;
     display: flex;
+    flex-wrap: wrap;
     padding-top: 1.5rem;
     border-top: 2px solid rgba(255, 255, 255, 0.2);
     ;
@@ -391,13 +392,14 @@ SECOND MODAL
     position: relative;
     display: inline-block;
     border: 1px solid #ffffff;
-    height: 2rem;
-    width: 4rem;
-    border-radius: 100rem;
+    height: 3rem;
+    width: 3rem;
+    border-radius: 1000rem;
     margin-right: 2rem;
     margin-top: 1rem;
 }
 .spa {
+    font-size: 2rem;
     font-weight: 500;
     position: absolute;
     display: inline-block;
@@ -453,7 +455,7 @@ BSC ADDRESS MODAL
     font-size: 3rem;
     position: absolute;
     top: 1rem;
-    right: 2rem;
+    left: 2rem;
 
     cursor: pointer;
 }
@@ -520,6 +522,14 @@ MEDIA QUERIES
         top: 30%;
         left: 6rem;
     }
+    .mnstr__coin {
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .coin__button {
+        margin-left: 0;
+        margin-top: 2.5rem;
+    }
 }
 @media only screen and (max-width: 900px) {
     html {
@@ -560,6 +570,18 @@ MEDIA QUERIES
     .first__paragraph {
         margin: 0 10rem 7rem 10rem;
     }
+    .mnstr-address__modal--form {
+        padding: 1.5rem 6rem;
+    }
+    .first__mnstr {
+        padding: 2rem 3rem 1rem 3rem;
+    }
+    .second__mnstr {
+        padding: 2rem 4rem;
+    }
+    .second__para {
+        margin-bottom: 2rem;
+    }
 
 }
 @media only screen and (max-width: 685px) {
@@ -578,8 +600,26 @@ MEDIA QUERIES
     .footer {
         padding: 8rem 0 8rem 0;
     }
+    .second__modal {
+        flex-direction: column;
+        width: 80%;
+        max-height: 70%;
+        margin: 0 auto;
+    }
+    .mnstr-address__modal--form {
+        padding: 1.5rem 9rem;
+        width: 90%;
+    }
+    .mnstr__coin {
+        padding: 3rem 0;
+        margin-top: 3rem;
+        margin-bottom: 0.5rem;
+    }
 }
 @media only screen and (max-width: 560px) {
+    html {
+        font-size: 40.6%;
+    }
     .heading__secondary {
         font-size: 2rem;
         line-height: 2rem;
@@ -590,11 +630,18 @@ MEDIA QUERIES
         margin-top: 2rem;
         padding: 1rem 2.5rem;
     }
+
+    .mnstr__coin {
+        padding: 2rem 0;
+        margin-top: 0;
+        margin-bottom: 1.5rem;
+    }
+
 }
 
 @media only screen and (max-width: 510px) {
     .about__text {
-        top: 0;
+        top: 15%;
     }
     .header__menu {
         display: inline-block;
@@ -620,10 +667,6 @@ MEDIA QUERIES
     }
 }
 @media only screen and (max-width: 430px) {
-    .about__text {
-        top: -1.5rem;
-        left: -2rem;
-    }
     .about__paragraph {
         font-size: 1.4rem;
         margin-bottom: 2rem;
@@ -631,13 +674,35 @@ MEDIA QUERIES
     .header__logo-box {
         margin-bottom: 4rem;
     }
+    .mnstr__logo {
+        width: 5rem;
+    }
+    .mnstr-address__modal--content {
+        left: 41%;
+        margin: 0 auto;
+        transform: translate(-50%, -50%);
+    }
+    .mnstr-address__modal--form {
+        padding: 1.5rem 2rem;
+        width: 135%;
+    }
+    .coin__modal:not(:last-child) {
+        margin-right: 0;
+    }
+    img.airdrop__img {
+        width: 5rem;
+        margin-right: 2rem;
+    }
+    .airdrop__button {
+        font-size: 1.25rem;
+        padding: .4rem 1.2rem;
+    }
     .footer {
         padding: 6rem 0 6rem 0;
     }
 }
 @media only screen and (max-width: 402px) {
     .about__text {
-        top: -5.5rem;
         left: -2rem;
     }
     .main__box {
