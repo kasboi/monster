@@ -555,6 +555,7 @@ MEDIA QUERIES
     }
     .header__logo-box {
         margin-left: 0;
+        width: 40%;
     }
     .header__logo-box img:first-child{
         display: none;
@@ -645,7 +646,7 @@ MEDIA QUERIES
     .header__nav-list {
         margin-bottom: 2.5rem;
     }
-    
+
     .about__button:link, .about__button:visited {
         font-size: 1rem;
         margin-top: 2rem;
